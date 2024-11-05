@@ -53,7 +53,7 @@ static void	freemyhomie(char **str)
 	int	i;
 
 	i = -1;
-	while(str[++i])
+	while (str[++i])
 		free(str[i]);
 	free(str);
 }
@@ -80,7 +80,7 @@ char	**ft_split(char const *s, char c)
 		letters = cletters((char *)(s + i), c);
 		str[j] = ft_substr(s, i, letters);
 		if (!str[j])
-			return (freemyhomie(str),NULL);
+			return (freemyhomie(str), NULL);
 		i += letters;
 		j++;
 	}
